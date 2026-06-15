@@ -6,6 +6,7 @@
 
         <classes>
             <class name="com.qa.tests.GoogleTest"/>
+            <class name="com.qa.tests.ExtentTestDemo"/>
         </classes>
 
     </test>
