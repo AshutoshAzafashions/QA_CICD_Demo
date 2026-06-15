@@ -8,17 +8,20 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GoogleTest {
 
-    @Test
-    public void verifyGoogle() {
+	@Test
+	public void verifyGoogle() {
 
-        WebDriverManager.chromedriver().setup();
+	    WebDriverManager.chromedriver()
+	                     .clearDriverCache()
+	                     .setup();
 
-        WebDriver driver = new ChromeDriver();
+	    WebDriver driver = new ChromeDriver();
 
-        driver.get("https://www.google.com");
+	    driver.get("https://www.google.com");
 
-        System.out.println(driver.getTitle());
+	    System.out.println(driver.getTitle());
 
-        driver.quit();
+	    driver.quit();
+	
+	}
     }
-}
